@@ -5,9 +5,9 @@ import subprocess
 import random
 import base64
 
-st.set_page_config(page_title="MP4 to WebP 일괄 변환기 (랜덤 파일명)", page_icon="🎲", layout="centered")
+st.set_page_config(page_title="MP4 to WebP 일괄 변환기 (랜덤 파일명)", page_icon="🖼️", layout="centered")
 
-st.title("🎲 MP4 ➔ WebP 일괄 변환기 (랜덤 파일명)")
+st.title("🖼️ 양의 WEBP 변환기")
 
 # 설명 문구들 (폰트 크기 통일)
 st.write("10000XXXXX 형태의 5자리 랜덤 파일명으로 도출되며 일괄 다운로드 혹은 개별 다운로드를 진행할 수 있습니다.")
@@ -30,7 +30,7 @@ uploaded_files = st.file_uploader(
 if uploaded_files:
     st.info(f"📁 총 {len(uploaded_files)}개의 파일이 선택되었습니다.")
     
-    if st.button("🚀 랜덤 파일명으로 전체 변환 시작", type="primary", use_container_width=True):
+    if st.button("🔄 WEBP로 전체 변환 시작", type="primary", use_container_width=True):
         progress_bar = st.progress(0)
         status_text = st.empty()
         
@@ -90,7 +90,7 @@ if uploaded_files:
 
 # 변환 결과 출력 (항상 유지)
 if st.session_state.converted_files:
-    st.success(f"🎉 총 {len(st.session_state.converted_files)}개 파일 변환 완료!")
+    st.success(f"🔮 총 {len(st.session_state.converted_files)}개 파일 변환 완료!")
     st.markdown("---")
     
     st.subheader("📦 전체 일괄 다운로드")
